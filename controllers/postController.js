@@ -6,7 +6,7 @@ exports.createPost = async (req, res) => {
         const post = new Post({
             title, body,
         });
-        const savedPost = await Post.save();
+        const savedPost = await post.save();
 
         res.json({
             post: savedPost,
